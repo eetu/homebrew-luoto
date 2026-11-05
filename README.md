@@ -1,15 +1,10 @@
 # homebrew-luoto
 
-Homebrew tap for [luoto](https://github.com/eetu/luoto): dev sandboxes that contain
-supply-chain attacks. macOS and Linux.
+luoto moved to [eetu/tap](https://github.com/eetu/homebrew-tap):
 
 ```sh
-brew tap eetu/luoto
-brew trust eetu/luoto
-brew install luoto
-luoto setup
+brew install eetu/tap/luoto
 ```
 
-Homebrew loads a third-party tap only once you trust it, hence `brew trust`.
-`Formula/luoto.rb` is written by luoto's release workflow; changes belong in
-[`packaging/homebrew`](https://github.com/eetu/luoto/tree/main/packaging/homebrew).
+An install from here moves there on `brew update` (`tap_migrations.json`); then trust the
+formula in its new tap with `brew trust --formula eetu/tap/luoto`, and `brew untap eetu/luoto`.
